@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="font/fontawesome-free-5.2.0-web/css/all.css"/>
+		<style type="text/css">
+			.navbar_x {
+				padding-top: 6px;
+				background-color: #eeeef9;
+			}
+			
+			.navbar_x #search {
+				border-radius:6px ;
+				border: 1px solid #44aff9;
+			}
+			
+			.navbar_x label {
+				width: 1.3rem;
+			}
+			
+			.navbar_x .fa-search {
+				color: #44AFF9;
+			}
+			
+			.navbar_x .fa-search:hover {
+				color: #44AFFF;
+				font-size: 1.1rem;
+			}
+			
+			.upload_file {
+				height: 100px;
+				border: 1px dashed #aaa;
+				margin-left: 15px;
+				margin-right: 15px;
+			}
+			
+			h3 {
+				color: #2679c6;
+				border-bottom: 1px dotted #eee;
+				line-height: 2;
+			}
+			
+			.header3 {
+				padding: 0;
+			}
+			
+			.info {
+				padding: 0;
+				margin: 0;
+				border: 1px solid #ccc;	
+			}
+			
+			.info_to_add {
+				margin: 0;
+			}
+			
+			.info_to_add input,.info_to_add .text-right,.info_to_add select{
+				margin-top: 10px;
+				margin-bottom: 10px;
+			}
+			
+			.head_ {
+				margin: 10px;
+				font-size: 20px;
+				color: darkblue;
+			}
+			
+			.head_and_info {
+				padding-right: 15px;
+				padding-left: 15px;
+			}
+			
+			.yes_and_cancel {
+				display: flex;
+				justify-content: space-around;
+				margin-top: 20px;
+				margin-bottom: 20px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="col-12">
+			<div class="row navbar_x">
+				<div class="col-8">
+					<span><i class="fas fa-home"></i></span>
+					<span>首页</span>
+					&nbsp;&gt;
+					<span>学生管理</span>
+					&nbsp;&gt;
+					<span>添加学生</span>
+				</div>
+				<div class="col-4 search">
+						<label for="search"><i class="fas fa-search"></i></label>
+						<input type="text" name="searc1h" id="search" value="" placeholder=" Search..."/>
+				</div>
+			</div>
+			<div class="row head_and_info">
+				<div class="col-12 header3">
+					<h3>添加学生信息</h3>
+				</div>
+				<div class="btn-group">
+					<div class="btn btn-warning">单个添加</div>
+					<div class="btn btn-success">批量导入</div>
+				</div>
+				<div class="row info">
+					<div class="col-3 head_">
+						<i class="fas fa-user-plus"></i>个人信息
+					</div>
+					<div class="row info_to_add">
+						<div class="col-2 text-right">院系：</div>
+						<div class="col-6">
+							<select name="学院" id="coleage" onchange="coleage_selected()">
+								<option value="">选择学院</option>
+								<option value="计信院">计信院</option>
+								<option value="商院">商院</option>
+								<option value="能电院">理学院</option>
+								<option value="马院">马院</option>
+								<option value="外院">水文院</option>
+							</select>
+							<select name="专业" id="major" onchange="major_selected()">
+								<option value="">选择专业</option>
+							</select>
+							<select name="班级" id="class_">
+								<option value="">选择班级</option>
+							</select>
+						</div>
+						<div class="col-4"></div>
+						<div class="col-2 text-right">学号：</div>
+						<div class="col-4">
+							<input type="text" name="id" id="id" value="" />
+						</div>
+						<div class="col-2 text-right">姓名：</div>
+						<div class="col-4">
+							<input type="text" name="name" id="name" value="" />
+						</div>
+						<div class="col-2 text-right">性别：</div>
+						<div class="col-4">
+							<input type="radio" name="gender" id="" value="男" />男&emsp;
+							<input type="radio" name="gender" id="" value="女" />女
+						</div>
+						<div class="col-2 text-right">政治面貌：</div>
+						<div class="col-4">
+							<input type="text" name="type" id="type" value="" />
+						</div>
+						<div class="col-2 text-right">四级成绩：</div>
+						<div class="col-4">
+							<input type="text" name="cet4" id="cet4" value="" />
+						</div>
+						<div class="col-2 text-right">六级成绩：</div>
+						<div class="col-4">
+							<input type="text" name="cet6" id="cet6" value="" />
+						</div>
+						<div class="col-2 text-right">党课结业时间：</div>
+						<div class="col-4">
+							<input type="date" name="jktime" id="jktime" value="" />
+						</div>
+						<div class="col-2 text-right">推优时间：</div>
+						<div class="col-4">
+							<input type="date" name="tytiime" id="tytiime" value="" />
+						</div>
+						<div class="col-2 text-right">入党申请书：</div>
+						<div class="col-8 upload_file">
+							点击此区域添加文件...
+						</div>
+							<div class="col-4"></div>
+							<div class="col-4 yes_and_cancel">
+								<div class="btn btn-success">确定</div>
+								<div class="btn btn-warning">取消</div>
+							</div>
+							<div class="col-4"></div>
+					</div>
+				</div>
+			</div>	
+		</div>						
+		<script src="js/jquery-3.3.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var coleage_list = ["选择学院","计信院","商学院","理学院","马院","水文院"]
+			var major_list = [
+				["选择专业"],
+				["计算机","通信","电信"],
+				["信管","会计","国贸","金融"],
+				["数学","物理","化学"],
+				["马克思","心理学"],
+				["水文","农水","测绘","环资"]
+			]
+			var class_list = [
+				[["选择班级"]],
+				[["计算机1班","计算机2班","计算机3班","计算机4班","计算机5班"],["通信1班","通信2班","通信3班","通信4班"],["电信1班","电信2班"]],
+				[["信管1班","信管2班"],["会计1班","会计2班","会计3班"],["国贸1班","国贸2班"],["金融1班"]],
+				[["数学1班","数学2班"],["物理1班","物理2班"],["化学1班","化学2班"]],
+				[["马克思1班"],["心理1班"]],
+				[["水文1班","水文2班"],["农水1班","农水2班","农水3班"],["测绘1班","测绘2班"],["环资1班","环资2班"]]
+			]
+			
+			function coleage_selected(){
+				var i = $("#coleage").get(0).selectedIndex
+				var m = document.getElementById("major")
+				m.innerHTML=""
+				for(j=0;j<major_list[i].length;j++){
+					var m_opt = document.createElement("option")
+					m_opt.setAttribute("value",major_list[i][j])
+					m_opt.innerText = major_list[i][j]
+					m.appendChild(m_opt)
+				}
+				i = $("#coleage").get(0).selectedIndex
+				var k = $("#major").get(0).selectedIndex
+				var c = document.getElementById("class_")
+				c.innerHTML = ""
+				for(j=0;j<class_list[i][k].length;j++){
+					var c = document.getElementById("class_")
+					var c_opt = document.createElement("option")
+					c_opt.setAttribute("value",class_list[i][k][j])
+					c_opt.innerText = class_list[i][k][j]
+					c.appendChild(c_opt)
+				}	
+				
+			}
+			
+			function major_selected(){
+				var c = document.getElementById("class_")
+				var i = $("#coleage").get(0).selectedIndex
+				var k = $("#major").get(0).selectedIndex
+				c.innerHTML = ""
+				for(j=0;j<class_list[i][k].length;j++){
+					var c_opt = document.createElement("option")
+					c_opt.setAttribute("value",class_list[i][k][j])
+					c_opt.innerText = class_list[i][k][j]
+					c.appendChild(c_opt)
+				}	
+			}
+		</script>
+	</body>
+</html>

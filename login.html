@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="font/fontawesome-free-5.2.0-web/css/all.css"/>
+	<style>
+		* {
+			margin: 0px;
+			font-size: 17px;
+			box-sizing: border-box;
+		}
+			
+		#container {
+			border: solid 1px #eee;
+			width: 80%;
+			margin: auto;
+		}
+			
+		#header {
+			height: 120px;
+			width: 100%;
+			background-color: #e4f2fd;
+		}
+		
+		#header span {
+			position: relative;
+			font-size: 25px;
+			color: #577ceb;
+		}
+		
+		#footer {
+			display: flex;
+			justify-content: space-around;
+			height: 200px;
+			width: 100%;
+			background-color:#405045 ;
+			color: #fff;
+			padding: 50px;
+		}
+		
+		#footer_link a {
+			text-decoration: none;
+			color: #fff;
+		}
+		
+		#footer_link a:visited {
+			color: #fff;
+		}
+		
+		#footer p {
+			font-size: 15px;
+			color: #d5d5d5;
+			line-height: 200%;
+		}
+		
+		#footer_authority span {
+			line-height: 200%;
+			font-size: 15px;
+		}
+		
+		#footer_logo {
+			padding-left:40px ;
+		}
+			
+		.news_pic {
+			width: 100%;
+		}
+		
+		form input {
+			margin: 5px 2px;
+			border-radius: 6px;
+			border: 1px solid #ddd;
+		}
+		
+		form input[placeholder] {
+			width: 80%;
+		}
+		
+		form {
+			text-align: center;
+			border:1px solid lightgreen;
+			border-radius: 10px;
+			padding: 20px;
+			margin: -20px 15px;
+		}
+		
+		.news_block {
+			margin-top: -20px;
+		}
+		
+		.arrow {
+			width: 30px;
+			height: 50px;
+			opacity: 0.3;
+			background-color: #eee;
+			position: relative;
+			margin: 0 1px;
+		}
+		
+		.arrow:hover {
+			background-color: #ddd;
+		}
+		
+		.pre {
+			float: left;
+		}
+		
+		.next {
+			float: right;
+		}
+	</style>
+	</head>
+	<body>
+		<div id="container">					<!--网页内容的容器，居中-->
+			<div id="header">
+				<img src="img/河海logo（深）.png" alt="" width="120" height="120"/>
+				<span>党员管理系统</span>
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<img class="news_pic"src="img/news1.jpg" alt="" />
+					<div class="arrow pre">
+						<img src="img/arrow_left.png" width="30" height="50"/>
+					</div>
+					<div class="arrow next">
+						<img src="img/arrow_right.png" width="30" height="50"/>
+					</div>
+				</div>
+				<div class="col-8 news_block" >
+					<div class="col-12 block_head">
+						<button class="btn btn-success">河海新闻</button>
+					</div>
+				
+					<div class="col-12 news">
+						<ul>
+							<li>这是一条河海新闻,字数不一样长</li>
+							<li>这是一条河海新闻，三个字</li>
+							<li>这是一条新闻，还要加多少字</li>
+							<li>这是一条河海新闻，什么什么顺利召开</li>
+							<li>这是一条，热烈欢迎谁谁起来我校参观</li>
+							<li>这是一条河海新闻</li>
+							<li>这是一条河海新闻，这个又需要加多少字呢</li>
+							<li>这是一条河海，还要</li>
+							<li>这是一条河海新闻，看看这一段需要多少个字</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-4">
+					<form action="" method="post">
+						<i class="fas fa-user"></i><input type="text" placeholder=" 用户名" />
+						<br />
+						<i class="fas fa-lock"></i><input type="password" placeholder=" 密码" />
+						<br />
+						<input type="radio" name="user_type" id="user_type" value="学生" />学生 &emsp;
+						<input type="radio" name="user_type" id="user_type" value="管理员" />管理员
+						<br />
+						<input type="submit" value="登录"/>
+					</form>
+				</div>
+			</div>
+			<div id="footer">
+				<div id="footer_logo"><img src="img/project.png"/></div>
+				<div id="footer_link">
+					<a href="#">河海官网</a> &nbsp;|&nbsp; 
+					<a href="#">计信院官网</a> &nbsp;|&nbsp; 
+					<a href="#">联系我们</a>
+					<p></p>	
+					<p>主管部门：计算机与信息学院党支部</p>
+					<p>Copyright &copy; 2017.河海大学HohaiUniversity-版权所有</p>
+				</div>
+				<div id="footer_authority">
+					<span>河海大学党委 &nbsp;计信院党委微信平台 <br />计信院2018创训小组 </span>
+				</div>
+			</div>
+		</div>
+		<script src="js/jquery-3.3.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			//以下是图片轮播效果
+			
+			var i = -1			//用于更改图片名字
+			function change(){
+				i++
+				i = i%4
+				var name = "img/news" + i + ".jpg"
+				$(".news_pic").attr("src",name)
+				var src = $(".news_pic").attr("src")
+				console.log(src)
+				t = setTimeout("change()",6000)
+			}
+			
+			//鼠标悬停图片时不改变图片
+			$(".news_pic").mouseenter(function(){
+				console.log("in")
+				clearTimeout(t)
+			})
+			
+			$(".news_pic").mouseleave(function(){
+				console.log("out")
+				t = setTimeout("change()",6000)
+			})
+			
+			//用于将箭头块定位到图片中间
+			var bottom_height = $(".news_pic").height()/2+25  
+			$(".arrow").css("bottom",bottom_height)
+			
+			$(".pre").click(function(){  //手动切换前一张
+				i = (i+2)%4
+				change()
+				clearTimeout(t)
+			})
+			
+			$(".next").click(function(){  //手动切换后一张
+				change()
+				clearTimeout(t)
+			})
+			window.onload = change()
+		</script>
+	</body>
+</html>

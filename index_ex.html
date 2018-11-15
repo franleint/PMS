@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>党员管理系统</title>
+		<style>
+			* {
+				margin: 0px;
+				font-size: 17px;
+				box-sizing: border-box;
+			}
+			
+			#nav li {
+				list-style: none;
+				line-height: 200%;
+				border-bottom: solid 1px #eee;
+			}
+			
+			#nav li:hover {
+				background-color:#fff;
+			}
+			
+			#container {
+				border: solid 1px #eee;
+				width: 80%;
+				margin: auto;
+			}
+			
+			#header {
+				height: 120px;
+				width: 100%;
+				background-color: #e4f2fd;
+			}
+			
+			#header span {
+				position: relative;
+				top: -52px;
+				font-size: 25px;
+				color: #577ceb;
+			}
+			
+			#footer {
+				display: flex;
+				justify-content: space-around;
+				height: 200px;
+				width: 100%;
+				background-color:#405045 ;
+				color: #fff;
+				padding: 50px;
+			}
+			
+			#footer_link a {
+				text-decoration: none;
+				color: #fff;
+			}
+			
+			#footer_link a:visited {
+				color: #fff;
+			}
+			
+			#footer p {
+				font-size: 15px;
+				color: #d5d5d5;
+				line-height: 200%;
+			}
+			
+			#footer_authority span {
+				line-height: 200%;
+				font-size: 15px;
+			}
+			
+			#footer_logo {
+				padding-left:40px ;
+			}
+			
+			#nav {
+				width: 25%;
+				height: 100%;
+				background-color: #f5f5f5;
+			}
+			
+			#center{
+				display: flex;
+				flex-direction: row;
+			}
+			
+			#content {
+				width: 75%;
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				border-left:solid 1px #EEE ;
+			}
+			
+			#information {
+				display: flex;
+				flex-direction: row;
+			}
+			
+			#nav_bar {
+				height: 40px;
+				width: 100%;
+				border: solid 1px #eee;
+				background-color:#f2f2f2;
+				float: right;
+			}
+			
+			#nav_bar span {
+				display: inline-block;
+				width: 55px;
+				height: 40px;
+				line-height: 40px;
+				text-align: center;
+				color: #7088ea;
+			}
+			
+			#nav_bar input {
+				float: right;
+				margin-top: 8px;
+				margin-right: 20px;
+				border: solid 1px deepskyblue;
+				border-radius: 5px;
+			}
+			
+			#left {
+				width: 70%;
+				display: flex;
+				flex-direction: column;
+			}
+			
+			#right {
+				width: 30%;
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+			}
+			
+			#notice {
+				margin:10px 30px;
+				width: 60%;
+			}
+			
+			.li_content_wrap {
+				padding: 10px 0px;
+				border: solid 1px #96B97D;
+			}
+			
+			.li_content_wrap  li {
+				line-height: 150%;
+				font-size: 15px;
+			}
+			
+			#news {
+				margin:10px 30px;
+				width: 85%;
+			}
+			
+			#help {
+				margin-top:10px;
+				margin-bottom: 30px;
+			}
+			
+			#service {
+				margin-bottom: 30px;
+				margin-top:10px;
+			}
+			
+			.block_head {
+				line-height: 250%;
+				background: #96b97d;
+				padding-left: 20px;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div id="container">					<!--网页内容的容器，居中-->
+			<div id="header">
+				<img src="img/河海logo（深）.png" alt="" width="120" height="120"/>
+				<span>党员管理系统</span>
+			</div>
+			<div id="main">
+				<div id="center">
+					<div id="nav">
+						<ul>
+							<li>我的支部</li>
+							<li>学生管理</li>
+							<li>更新学生成绩</li>
+							<li>报表生成</li>
+							<li>材料审核</li>
+							<li>关系转接</li>
+							<li>事务管理</li>
+							<li>消息管理</li>
+						</ul>
+					</div>
+					<div id="content">
+						<div id="nav_bar">
+							&gt;
+							<span>首页</span>
+							<input type="text" name="search" id="search" placeholder=" Search ..." size="12"/>
+						</div>
+						<div id="information">
+							<div id="left">
+								<div id="notice">
+									<div class="block_head">公告与通知</div>
+									<div class="li_content_wrap">
+										<ul>
+											<li>我是一条通知</li>
+											<li>我是一条通知</li>
+											<li>我是一条通知</li>
+											<li>我是一条通知</li>
+											<li>我是一条通知</li>
+											<li>我是一条通知</li>
+											<li>我是一条通知</li>
+											<li>我是一条通知</li>
+										</ul>
+									</div>
+								</div>
+								<div id="news">
+									<div class="block_head">校园新闻</div>
+									<div class="li_content_wrap">
+										<ul>
+											<li>我是一条大新闻，你不要搞一个大新闻	</li>
+											<li>我是一条大新闻，你不要搞一个大新闻	</li>
+											<li>我是一条大新闻，你不要搞一个大新闻	</li>
+											<li>我是一条大新闻，你不要搞一个大新闻	</li>
+											<li>我是一条大新闻，你不要搞一个大新闻	</li>
+											<li>我是一条大新闻，你不要搞一个大新闻	</li>
+											<li>我是一条大新闻，你不要搞一个大新闻	</li>
+											<li>我是一条大新闻，你不要搞一个大新闻	</li>
+											<li>我是一条大新闻，你不要搞一个大新闻	</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div id="right">
+								<div id="help">
+									<div class="block_head">党务工作指南</div>
+									<div class="li_content_wrap">
+										<ul>
+											<li>这是一条指南</li>
+											<li>这是一条指南</li>
+											<li>这是一条指南</li>
+											<li>这是一条指南</li>
+											<li>这是一条指南</li>
+										</ul>
+									</div>
+								</div>
+								<div id="service">
+									<div class="block_head">党员服务</div>
+									<div class="li_content_wrap">
+										<ul>
+											<li>这是一条服务信息</li>
+											<li>这是一条服务信息</li>
+											<li>这是一条服务信息</li>
+											<li>这是一条服务信息</li>
+											<li>这是一条服务信息</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="footer">
+				<div id="footer_logo"><img src="img/project.png"/></div>
+				<div id="footer_link">
+					<a href="#">河海官网</a> &nbsp;|&nbsp; 
+					<a href="#">计信院官网</a> &nbsp;|&nbsp; 
+					<a href="#">联系我们</a>
+					<p></p>	
+					<p>主管部门：计算机与信息学院党支部</p>
+					<p>Copyright &copy; 2017.河海大学HohaiUniversity-版权所有</p>
+				</div>
+				<div id="footer_authority">
+					<span>河海大学党委 &nbsp;计信院党委微信平台 <br />计信院2018创训小组 </span>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

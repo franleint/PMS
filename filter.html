@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>筛选学生</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="font/fontawesome-free-5.2.0-web/css/all.css"/>
+		<style>
+			.navbar_x {
+				margin: 0;
+				padding-top: 6px;
+				background-color: #eeeef9;
+			}
+			
+			.navbar_x #search {
+				border-radius:6px ;
+				border: 1px solid #44aff9;
+			}
+			
+			.navbar_x label {
+				width: 1.3rem;
+			}
+			
+			.navbar_x .fa-search {
+				color: #44AFF9;
+			}
+			
+			.navbar_x .fa-search:hover {
+				color: #44AFFF;
+				font-size: 1.1rem;
+			}
+			
+			.pagecontent {
+				padding: 0;
+			}
+			
+			.info_container {
+				margin-left: 15px;
+				margin-right: 15px;
+			}
+			
+			.info_to_show {
+				background-color: #44AFF9;
+				font-size: 14px;
+				font-weight: 600;
+				padding-top: 20px;
+				padding-bottom: 20px;
+			}
+			
+			.info_to_show .student_head {
+				height: 140px;
+				width: 105px;
+				margin: auto;
+				text-align: right;
+			}
+			
+			.info_to_show img {
+				border-radius:50% ;
+				height: 140px;
+				width: 105px;	
+				margin: auto;
+			}
+			
+			.info_to_show .push_right {
+				text-align: right;
+			}
+			
+			.info_to_show table{
+				border-collapse:collapse;
+				line-height: 1;
+			}
+			
+			.filter {
+				font-size: 15px;
+				margin: 20px 0;
+				margin-left: 40px;
+			}
+			
+			.filter select {
+				margin-top: 6px;
+			}
+			
+			.result {
+				padding: 0 15px;
+				padding-bottom: 120px;
+				margin-bottom: 40px;
+			}
+			
+			.result .result_head {
+				background-color: #44AFF9;
+				padding: 20px;
+				color: #fff;
+				font-weight: 600;
+				letter-spacing: 3px;
+			}
+			
+			.result .show_amount {
+				background-color: #F2F2F2;
+				padding: 30px;
+			}
+			
+			.result .show_amount .btn {
+				margin-top: -5px;
+				padding: 3px 10px;
+			}
+			
+			#result_lists{
+				width: 100%;
+				padding: 0 !important;
+			}
+			
+			.result table tr td {			/*th样式在js里追加，不然不起作用*/
+				border: 1px solid #eee;
+				padding-left: 0;
+				padding-right: 0;
+				text-align: center;
+			}
+			
+			.result tr td i {
+				letter-spacing: 5px;
+			}
+			
+			.result .fa-search-plus {
+				color: #44AFF9;
+				opacity: 0.7;
+			}
+			
+			.result .fa-pen {
+				color: limegreen;
+				opacity: 0.7;
+			}
+			
+			.result .fa-trash-alt {
+				color: orange;
+				opacity: 0.7;
+			}
+			
+			.result .fa-square {
+				color: #ccc;
+				opacity: 0.7;
+				padding-right: 10px;
+				padding-left: 10px;
+			}
+			
+			.result .fa-check-square {
+				padding-right: 10px;
+				padding-left: 10px;
+			}
+			
+			.result .fa-square:hover, .result .fa-trash-alt:hover, .result .fa-pen:hover, .result .fa-search-plus:hover{
+				opacity: 1;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="col-12 pagecontent">
+			<div class="row navbar_x">
+				<div class="col-8">
+					<span><i class="fas fa-home"></i></span>
+					<span>首页</span>
+					&nbsp;&gt;
+					<span>学生管理</span>
+					&nbsp;&gt;
+					<span>筛选学生</span>
+				</div>
+				<div class="col-4 search">
+					<label for="search"><i class="fas fa-search"></i></label>
+					<input type="text" name="searc1h" id="search" value="" placeholder=" Search..."/>
+				</div>
+			</div>
+			<div class="row info_container">
+				<div class="col-12 info_to_show">
+					<class class="row">
+						<div class="col-3 student_head">
+							<img src="img/1506010512.jpg"/>
+						</div>
+						<div class="col-9">
+							<table cellspacing="" cellpadding="5" >
+								<tr>
+									<td class="push_right">学号：</td>
+									<td class="pull_left">1606010415</td>
+									<td class="push_right"></td>
+									<td class="push_right">姓名：</td>
+									<td class="pull_left">农智谋</td>
+								</tr>
+								<tr>
+									<td class="push_right">专业：</td>
+									<td class="pull_left">计算机科学与技术</td>
+									<td class="push_right"></td>
+									<td class="push_right">班级：</td>
+									<td class="pull_left">16级计算机四班</td>
+								</tr>
+								<tr>
+									<td class="push_right">政治面貌：</td>
+									<td class="pull_left">共青团员</td>
+									<td class="push_right"></td>
+									<td class="push_right">当前状态：</td>
+									<td class="pull_left">预备党员</td>
+								</tr>
+								<tr>
+									<td class="push_right">绩点：</td>
+									<td class="pull_left">4.0</td>
+									<td class="push_right"></td>
+									<td class="push_right">四级成绩：</td>
+									<td class="pull_left">526</td>
+								</tr>
+								<tr>
+									<td class="push_right">六级成绩：</td>
+									<td class="pull_left">425</td>
+									<td class="push_right"></td>
+									<td class="push_right">社会工作：</td>
+									<td class="pull_left"></td>
+								</tr>
+							</table>
+						</div>
+					</class>
+				</div>
+			</div>
+			<form action="#" class="filter" method="post">	
+				<div class="row">
+					<div class="col-3">
+						<!--条件1：<input type="text" name="" id="" value="" size="10"/>-->
+						 <strong>学院:</strong>
+						<select name="coleage" id="coleage">
+							<option value="">所有学院</option>
+							<option value="计信院">计信院</option>
+							<option value="商院">商院</option>
+							<option value="能电院">理学院</option>
+							<option value="马院">马院</option>
+							<option value="外院">水文院</option>
+						</select>
+					</div>
+					<div class="col-3">
+						<!--条件2：<input type="text" name="" id="" value="" size="10"/>-->
+						<strong>当前状态：</strong>
+						<select name="satus" id="status">
+							<option value="">所有状态</option>
+							<option value="共青团员">共青团员</option>
+							<option value="入党积极分子">入党积极分子</option>
+							<option value="预备党员">预备党员</option>
+							<option value="中共党员">中共党员</option>
+						</select>
+					</div>
+					<div class="col-3">
+						<!--条件3：<input type="text" name="" id="" value="" size="10"/>-->
+						<strong>成绩：</strong>
+						<select name="grades">
+							<option value="">所有成绩</option>
+							<option value="3.5">绩点3.5以上</option>
+							<option value="4.0">绩点4.0</option>
+							<option value="4.5">绩点4.5以上</option>
+							<option value="cet4">英语4级</option>
+							<option value="cet6">英语6级</option>
+						</select>
+					</div>
+					<input type="submit" value="筛选" class="btn btn-sm btn-primary"></input>
+				</div>
+			</form>
+			<div class="col-12 result">
+				<div class="col-12 result_head">
+					查询结果
+				</div>
+				<div class="col-12 show_amount">
+					每页显示条数： <input type="text" class="amount" value="5" onchange="change_amount()"/>
+					<button class="btn btn-sm btn-primary ok">OK</button>
+				</div>
+				<table cellspacing="" cellpadding="" class="table" id="result_lists">
+					<!--<tr>
+						<td><i class="far fa-square"></i></td>
+						<th>学号</th>
+						<th>姓名</th>
+						<th>专业</th>
+						<th>政治面貌</th>
+						<th>入党/推优时间</th>	
+						<th></th>
+					</tr>
+					<tr>
+						<td><i class="far fa-square"></i></td>
+						<td>1606010415</td>
+						<td>农智谋</td>
+						<td>计算机科学与技术</td>
+						<td>共青团员</td>
+						<td>2018年8月8日</td>
+						<td><i class="fa fa-search-plus"></i><i class="fa fa-pen"></i><i class="fa fa-trash-alt"></i></span></td>
+					</tr>
+					<tr>
+						<td><i class="far fa-square"></i></td>
+						<td>1606020415</td>
+						<td>尹海鑫</td>
+						<td>通信工程</td>
+						<td>预备党员</td>
+						<td>2018年4月8日</td>
+						<td><i class="fa fa-search-plus"></i><i class="fa fa-pen"></i><i class="fa fa-trash-alt"></i></span></td>
+					</tr>
+					<tr>
+						<td><i class="far fa-square"></i></td>
+						<td>1606010515</td>
+						<td>阿依古丽</td>
+						<td>计算机科学与技术</td>
+						<td>入党积极分子</td>
+						<td>2018年4月8日</td>
+						<td><i class="fa fa-search-plus"></i><i class="fa fa-pen"></i><i class="fa fa-trash-alt"></i></span></td>
+					</tr>
+					<tr>
+						<td><i class="far fa-square"></i></td>
+						<td>1606010515</td>
+						<td>张德</td>
+						<td>通信工程</td>
+						<td>入党积极分子</td>
+						<td>2018年4月8日</td>
+						<td><i class="fa fa-search-plus"></i><i class="fa fa-pen"></i><i class="fa fa-trash-alt"></i></span></td>
+					</tr>
+					<tr>
+						<td><i class="far fa-square"></i></td>
+						<td>1606010515</td>
+						<td>马放之</td>
+						<td>计算机科学与技术</td>
+						<td>入党积极分子</td>
+						<td>2018年4月8日</td>
+						<td><i class="fa fa-search-plus"></i><i class="fa fa-pen"></i><i class="fa fa-trash-alt"></i></span></td>
+					</tr>-->
+				</table>
+				<div class="row">
+					<div class="col-8"></div>
+					<div class="col-1 ">
+						<div class="btn btn-success btn-sm">导出</div>
+					</div>
+					<div class="col-3 ">
+						<div class="btn-group">
+							<button class="btn btn-sm">上一页</button>
+							<button class="btn btn-sm">1</button>
+							<button class="btn btn-sm">下一页</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/jquery-3.3.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			function checked(){
+				$(".fa-square").click(function(){
+					//用于切换方框勾选或取消状态
+					var color = $(this).css("color")
+					if(color.indexOf("204")>0){
+						$(this).attr("class","far fa-check-square")
+						$(this).css("color","limegreen")
+					}else{
+						$(this).attr("class","far fa-square")
+						$(this).css("color","#ccc")
+					}	
+				})
+			}
+			
+			$.getJSON("json/filter_students.json",function(data){
+				var rl = $("#result_lists")		//默认显示的信息
+				rl.append('<th><i class="far fa-square"></i></th><th>学号</th><th>姓名</th><th>专业</th><th>政治面貌</th><th>入党/推优时间</th><th></th>')
+				rl.find('th').css({"border":"1px solid #eee","text-align":"center"})		//给每项标题追加样式
+				rl.find('i').css({"margin-left":"-5px"})
+				
+				$.each(data,function(infoIndex,info){		//遍历
+					rl.append('<tr><td><i class="far fa-square"></i></td><td>'+info["id"]+'</td><td>'+info["name"]+'</td><td>'+info["major"]+'</td><td>'+info["status"]+'</td><td>'+info["time"]+'</td><td><i class="fa fa-search-plus"></i><i class="fa fa-pen"></i><i class="fa fa-trash-alt"></i></span></td>')
+					if(infoIndex == 4) return false			//默认显示五条
+				})
+				checked()		//追加选中或取消功能
+			})
+			
+			function change_amount() {		//用于改变显示的个数
+				$.getJSON("json/filter_students.json",function(data){
+					var rl = $("#result_lists")
+					var amount = $(".amount").val()			//输入的显示行数
+					amount = parseInt(amount)
+					rl.empty()
+					rl.append('<th><i class="far fa-square"></i></th><th>学号</th><th>姓名</th><th>专业</th><th>政治面貌</th><th>入党/推优时间</th><th></th>')
+					rl.find('th').css({"border":"1px solid #eee","text-align":"center"})		//给每项标题追加样式
+					rl.find('i').css({"margin-left":"-5px"})
+					
+					$.each(data,function(infoIndex,info){		//遍历
+						rl.append('<tr><td><i class="far fa-square"></i></td><td>'+info["id"]+'</td><td>'+info["name"]+'</td><td>'+info["major"]+'</td><td>'+info["status"]+'</td><td>'+info["time"]+'</td><td><i class="fa fa-search-plus"></i><i class="fa fa-pen"></i><i class="fa fa-trash-alt"></i></span></td>')
+						if(infoIndex == amount-1) return false		//达到需要显示的数量，停止遍历
+					})
+					checked()			//追加选中或取消功能
+				})
+			}
+		</script>
+	</body>
+</html>

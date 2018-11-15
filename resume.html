@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>简历</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="font/fontawesome-free-5.2.0-web/css/all.css"/>
+	<style>
+		.navbar_x {
+			padding-top: 6px;
+			background-color: #eeeef9;
+		}
+		
+		.navbar_x #search {
+			border-radius:6px ;
+			border: 1px solid #44aff9;
+		}
+		
+		.navbar_x label {
+			width: 1.3rem;
+		}
+		
+		.navbar_x .fa-search {
+			color: #44AFF9;
+		}
+		
+		.navbar_x .fa-search:hover {
+			color: #44AFFF;
+			font-size: 1.1rem;
+		}
+		
+		h3 {
+			color: #2679c6;
+			line-height: 2;
+			float: left;
+		}
+		
+		.header3 {
+			padding: 0;
+			float: left;
+			border-bottom: 1px dotted #eee;
+		}
+
+		.header3 span {
+			position: relative;
+			top: 10px; 
+		}
+
+		.resume_content {
+			clear: left;
+			border: 1px solid #eee;
+		}
+
+		.sub_header {
+			background-color: #eee;
+			line-height: 2;
+			font-size: 1.2rem;
+			margin-bottom: 20px;
+			margin-left: -30px;
+			margin-right: -30px;
+		}
+
+		.sub_header .text-right {
+			font-size: 0.9rem;
+			margin-top: 5px;
+		}
+		
+		.left_side .mark {
+			border-radius: 15px;
+			background-color: #FFB752;
+			text-align: center;
+			margin-top: 30px;
+			margin-bottom: 30px;
+			margin-left: 21.5px;
+		}
+
+		.fa-paperclip {
+			font-size: 2rem;	
+		}
+
+		.amount {
+			margin-bottom: 20px;
+			border: 1px solid #E3E3E3;
+			margin-left: 21.5px;
+			text-align: center;
+			font-size: 0.9rem;
+		}
+		
+		.amount strong {
+			font-size: 1.3rem;
+			color: #479DD8;
+			background-color: #FAF8FC;
+		}
+
+		.selection {
+			padding: 0;
+			font-size: 1.5rem;
+			margin-bottom: 30px;
+			margin-left: 21.5px;
+		}
+		
+		.activity {
+			padding: 5px;
+			margin-bottom: 30px;
+			margin-left: 21.5px;
+			font-size: 1.1rem;
+			background-color: #FFB752;
+		}
+
+		.resume_mainbody {
+			margin-left: -83px;
+			border: 1px solid #DCEBF7;
+			border-spacing: 1px;
+			margin-bottom: 20px;
+		}
+
+		.resume_mainbody .row {
+			border: 1px dashed #F0F8FF;
+		}
+
+		.resume_mainbody .text-right {
+			background-color: #EDF3F4;
+			color: #336199;
+		}
+
+		.fa-undo {
+			color: #ACD392;
+		}
+
+		.fa-angle-up {
+			color: #AAAAAA;
+		}
+
+		.fa-times {
+			color: #E09E96;
+		}
+
+		.fa-eye {
+			color: #478FCA;
+		}
+
+		.fa-envelope {
+			color: #93CBF9;
+		}
+		.fa-download {
+			color: #DD5A43;
+		}
+	</style>
+</head>
+<body>
+	<div class="col-12">
+		<div class="row navbar_x">
+			<div class="col-8">
+				<span><i class="fas fa-home"></i></span>
+				<span>首页</span>
+				&nbsp;&gt;
+				<span>学生管理</span>
+				&nbsp;&gt;
+				<span>学生信息</span>
+			</div>
+			<div class="col-4 search">
+				<label for="search"><i class="fas fa-search"></i></label>
+				<input type="text" name="search" id="search" value="" placeholder="Search..."/>
+			</div>
+		</div>
+			<div class="col-12 header3">
+				<h3>学生信息</h3>
+			</div>
+			<div class="col-12 resume_content">
+				<div class="col-12">
+					<div class="row sub_header">
+						<div class="col-10">
+							<span>个人资料</span>
+						</div>
+						<div class="col-2 text-right">
+							<i class="fas fa-undo"></i>
+							<i class="fas fa-angle-up"></i>
+							<i class="fas fa-times"></i>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-4 left_side">
+						<div class="col-8">
+							<img src="img/1506010512.jpg" alt="" class="img-thumbnail">
+						</div>
+						<div class="col-6 mark">
+							<span>中共党员</span>
+						</div>
+						<div class="col-6 amount">
+							<strong>12</strong><br>材料完成状态
+						</div>
+						<div class="col-6 selection text-center">
+							<i class="fas fa-eye"></i>
+							<i class="far fa-envelope"></i>
+							<i class="fas fa-download"></i>
+						</div>
+						<div class="col-6 activity text-center">
+							<span><i class="fas fa-basketball-ball"></i>最近活动</span>
+						</div>
+					</div>
+					<div class="col-8 resume_mainbody">
+						<div class="row">
+							<div class="col-3 text-right">姓名</div>
+							<div class="col-9">金培源</div>
+						</div>
+						<div class="row">
+							<div class="col-3 text-right">学号</div>
+							<div class="col-9">1606010512</div>
+						</div>
+						<div class="row">
+							<div class="col-3 text-right">出生日期</div>
+							<div class="col-9">2018/3/8</div>
+						</div>
+						<div class="row">
+							<div class="col-3 text-right">专业</div>
+							<div class="col-9">计算机科学与技术</div>
+						</div>
+						<div class="row">
+							<div class="col-3 text-right">籍贯</div>
+							<div class="col-9">江苏省南京市</div>
+						</div>
+						<div class="row">
+							<div class="col-3 text-right">电话</div>
+							<div class="col-9">15850695499</div>
+						</div>
+						<div class="row">
+							<div class="col-3 text-right">邮箱</div>
+							<div class="col-9">1234@qq.com</div>
+						</div>
+						<div class="row">
+							<div class="col-3 text-right">成绩</div>
+							<div class="col-9">四级：优秀，六级：优秀；计算机二级：优秀；</div>
+						</div>
+						<div class="row">
+							<div class="col-3 text-right">绩点</div>
+							<div class="col-9">4.9</div>
+						</div>
+						<div class="row">
+							<div class="col-3 text-right">排名</div>
+							<div class="col-9">6</div>
+						</div>
+						<div class="row">
+							<div class="col-3 text-right">获得奖项</div>
+							<div class="col-9">
+								国家级奖项：国家奖学金，国奖励志奖学金，竞赛奖项<br>
+								省级奖项：江苏省三好学生，竞赛奖项<br>
+								校级奖项：校级比赛奖项<br>
+								院级奖项：院级比赛奖项
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-3 text-right">社会工作</div>
+							<div class="col-9">
+								校级任职：<br>
+								院级任职：<br>
+								班级任职：
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-3 text-right">最近上线</div>
+							<div class="col-9">3小时前</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+
+		
+		
+	<script src="js/jquery-3.3.1.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

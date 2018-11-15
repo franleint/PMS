@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>材料审核</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="font/fontawesome-free-5.2.0-web/css/all.css"/>
+	<style type="text/css">
+		.navbar_x {
+			padding-top: 6px;
+			background-color: #eeeef9;
+		}
+		
+		.navbar_x #search {
+			border-radius:6px ;
+			border: 1px solid #44aff9;
+		}
+		
+		.navbar_x label {
+			width: 1.3rem;
+		}
+		
+		.navbar_x .fa-search {
+			color: #44AFF9;
+		}
+		
+		.navbar_x .fa-search:hover {
+			color: #44AFFF;
+			font-size: 1.1rem;
+		}
+		
+		.review_head {
+			margin-left: 0px;
+			background-color: #44AFF9;
+			color: #fff;
+			font-weight: 600;
+			line-height: 2.5;
+		}
+		
+		.review {
+			padding: 0;
+			padding-bottom: 150px;
+			
+		}
+		.review .review_head {
+			background-color: #44AFF9;
+			padding: 20px;
+			color: #fff;
+			font-weight: 600;
+			letter-spacing: 3px;
+		}
+		
+		.review .show_amount {
+			background-color: #F2F2F2;
+			padding: 30px;
+		}
+		
+		.review .show_amount .btn {
+			margin-top: -5px;
+		}
+
+		.review .review_lists {
+			padding: 0; 
+		}
+		
+		.review .review_lists table td,.review .review_lists table th{
+			border: 1px solid #eee;
+			padding-left: 0;
+			padding-right: 0;
+			text-align: center;
+		}
+		
+		.review tr td i {
+			letter-spacing: 5px;
+		}
+	
+		.review .fa-search-plus {
+			color: #44AFF9;
+			opacity: 0.7;
+		}
+		
+		.review .fa-pen {
+			color: limegreen;
+			opacity: 0.7;
+		}
+		
+		.review .fa-trash-alt {
+			color: orange;
+			opacity: 0.7;
+		}
+		
+		.review .fa-square {
+			color: #ccc;
+			opacity: 0.7;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+		
+		.review .fa-square:hover, .review .fa-trash-alt:hover, .review .fa-pen:hover, .review .fa-search-plus:hover{
+			opacity: 1;
+		}
+	</style>
+	</head>
+	<body>
+		<div class="col-12">
+					<div class="row navbar_x">
+						<div class="col-8">
+							<span><i class="fas fa-home"></i></span>
+							<span>首页</span>
+							&nbsp;&gt;
+							<span>材料审核</span>
+						</div>
+						<div class="col-4 search">
+							<label for="search"><i class="fas fa-search"></i></label>
+							<input type="text" name="searc1h" id="search" value="" placeholder=" Search..."/>
+						</div>
+					</div>
+					<div class="col-12 review">
+						<div class="col-12 review_head">
+							<span>待审核列表</span>
+						</div>
+						<div class="col-12 show_amount">
+							每页显示条数： <input type="text" value="5"/>
+							<div class="btn btn-sm btn-primary"> OK </div>
+						</div>
+						<div class="col-12 review_lists">
+							<table cellspacing="" cellpadding="" class="table">
+								<tr>
+									<td><i class="far fa-square"></i></td>
+									<th>学号</th>
+									<th>姓名</th>
+									<th>材料名称</th>
+									<th>材料类别</th>
+									<th><i class="fa fa-clock"></i>申请时间</th>	
+									<th></th>
+								</tr>
+								<tr>
+									<td><i class="far fa-square"></i></td>
+									<td>1606010415</td>
+									<td>农智谋</td>
+									<td>《思想汇报》</td>
+									<td>思想汇报</td>
+									<td>2018/8/8</td>
+									<td><i class="fa fa-search-plus"></i><i class="fa fa-pen"></i><i class="fa fa-trash-alt"></i></span></td>
+								</tr>
+								<tr>
+									<td><i class="far fa-square"></i></td>
+									<td>1606020414</td>
+									<td>尹海鑫</td>
+									<td>《政审材料》</td>
+									<td>党员材料</td>
+									<td>2018/4/8</td>
+									<td><i class="fa fa-search-plus"></i><i class="fa fa-pen"></i><i class="fa fa-trash-alt"></i></span></td>
+								</tr>
+								<tr>
+									<td><i class="far fa-square"></i></td>
+									<td>1606010506</td>
+									<td>马放之</td>
+									<td>《政审材料》</td>
+									<td>党员材料</td>
+									<td>2018/6/19</td>
+									<td><i class="fa fa-search-plus"></i><i class="fa fa-pen"></i><i class="fa fa-trash-alt"></i></span></td>
+								</tr>
+								<tr>
+									<td><i class="far fa-square"></i></td>
+									<td>1606010518</td>
+									<td>张德</td>
+									<td>《思想汇报》</td>
+									<td>思想汇报</td>
+									<td>2018/6/11</td>
+									<td><i class="fa fa-search-plus"></i><i class="fa fa-pen"></i><i class="fa fa-trash-alt"></i></span></td>
+								</tr>
+								<tr>
+									<td><i class="far fa-square"></i></td>
+									<td>1604010432</td>
+									<td>阿依古丽·马丽提</td>
+									<td>《政审材料》</td>
+									<td>党员材料</td>
+									<td>2018/5/15</td>
+									<td><i class="fa fa-search-plus"></i><i class="fa fa-pen"></i><i class="fa fa-trash-alt"></i></span></td>
+								</tr>
+							</table>
+							<div class="row">
+								<div class="col-9"></div>
+								<div class="col-3 ">
+									<div class="btn-group">
+										<button class="btn btn-sm">上一页</button>
+										<button class="btn btn-sm">1</button>
+										<button class="btn btn-sm">下一页</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		</div>
+		<script src="js/jquery-3.3.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script type="text/javascript">
+			//变量i用于切换方框勾选或取消状态
+			var i=0
+			$(".fa-square").click(function(){
+				//用于切换方框勾选或取消状态
+				if(i==0){
+					$(this).attr("class","far fa-check-square")
+					$(this).css("color","limegreen")
+					i=1
+				}else{
+					$(this).attr("class","far fa-square")
+					$(this).css("color","#ccc")
+					i=0
+				}	
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>更新学生成绩</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="font/fontawesome-free-5.2.0-web/css/all.css"/>
+		<style type="text/css">
+			.navbar_x {
+				padding-top: 6px;
+				background-color: #eeeef9;
+			}
+			
+			.navbar_x #search {
+				border-radius:6px ;
+				border: 1px solid #44aff9;
+			}
+			
+			.navbar_x label {
+				width: 1.3rem;
+			}
+			
+			.navbar_x .fa-search {
+				color: #44AFF9;
+			}
+			
+			.navbar_x .fa-search:hover {
+				color: #44AFFF;
+				font-size: 1.1rem;
+			}
+			
+			h3 {
+				margin: 0 15px 20px 15px;
+				color: #2679c6;
+				border-bottom: 1px dotted #eee;
+				line-height: 2;
+			}
+			
+			.header3 {
+				padding: 0;
+			}
+			
+			.upload_file {
+				height: 100px;
+				border: 1px dashed #aaa;
+				margin: auto;
+			}
+			
+			.row .col-4 .btn {
+				margin: 20px 0 120px 60px;
+			}
+			
+			object {
+				width: 100%;
+				height: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<object data="header.html" type="text/x-javascript" width="100%" height="100%"></object>
+			<div class="row">
+				<div class="col-3">
+					<object data="navi.html" type="text/x-javascript" width="100%" height="100%"></object>
+				</div>
+				<div class="col-9">
+					<div class="col-12">
+						<div class="row navbar_x">
+							<div class="col-8">
+								<span><i class="fas fa-home"></i></span>
+								<span>首页</span>
+								&nbsp;&gt;
+								<span>更新学生成绩</span>
+							</div>
+							<div class="col-4 search">
+								<label for="search"><i class="fas fa-search"></i></label>
+								<input type="text" name="searc1h" id="search" value="" placeholder=" Search..."/>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12 header3">
+								<h3><i class="fas fa-upload"></i> 上传文件</h3>
+							</div>
+							<div class="col-10 upload_file">点击此区域选择文件上传...</div>
+							<div class="col-4">
+								<div class="btn btn-success">上传</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-12">
+				<object class="footer" data="footer.html" type="text/x-javascript" width="100%" height="100%"></object>
+				<!--<embed src="footer.html" width="100%" height="100%"></embed>-->
+			</div>
+		</div>
+		<script src="js/jquery-3.3.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var f = $(".footer")
+//			var h = f.document.documentElement
+			console.log(f)
+			console.log($(".footer").height())
+		</script>
+	</body>
+</html>

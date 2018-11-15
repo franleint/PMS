@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>首页</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="font/fontawesome-free-5.2.0-web/css/all.css"/>
+		<style type="text/css">
+			.container {
+				border: 1px solid #eee;
+				padding: 0;
+			}
+			
+			.header {
+				height: 120px;
+				background-color:#E4F2FD ;
+				border-bottom: 1px solid #eee;
+				margin: 0;
+			}
+			
+			.header .logo_area {
+				margin-left: 15px;
+			}
+			
+			.header_logo {
+				margin-left: 80px;
+				height: 120px;
+				width: 120px;
+				line-height: 0;
+			}
+			
+			.header h2 {
+				line-height: 120px;
+				color:deepskyblue;
+			}
+			
+			.navs {
+				border-right: 1px solid #eee;
+				padding-right: 0;
+			}
+			
+			.navs li {
+				line-height: 200%;
+				background-color: #f9f9f9;
+				border-bottom: 1px solid #eee;
+				list-style: none;
+			}
+			
+			.navs li i {
+				margin-left: 20px;
+				margin-right: 15px;
+			}
+			
+			.navs li #too_wide {
+				margin-right: 10px;
+			}
+			
+			.navs a {
+				display: block;
+				height: 100%;
+				width: 100%;
+				color: #444;
+				text-decoration: none;
+				color: inherit;
+			}
+			
+			.navs a:hover {
+				color: #44AFF9;
+			}
+			
+			.navs li:hover {
+				background-color:#fff;
+				border-left:2px solid #44AFF9;
+			}
+			
+			.navs li .show {
+				float: right;
+			}
+			
+			.navs .folded {
+				margin: 0;
+				padding-left:0 ;
+			}
+			
+			.navs  .folded li {
+				padding-left: 50px;
+				background-color: #fff;
+			}
+			
+			.navbar_x {
+				padding: 0;
+				background-color: #f5f5f5;
+				border-bottom: 1px solid #eee;
+			}
+			
+			.navbar_x .search {
+				margin-top: 5px;
+			}
+			
+			.navbar_x span {
+				line-height: 40px;
+			}
+			
+			#footer {
+				background-color: #405045;
+				padding: 40px;
+				color: #FFF;
+				line-height: 200%;
+				margin: 0;
+			}
+			
+			#footer img {
+				margin-left: 40px;
+			}
+			
+			#footer a{
+					color: #fff;
+					text-decoration: none;
+			}
+			
+			#search {
+				border-radius:6px ;
+				border: 1px solid #44aff9;
+			}
+			
+			.info_to_show {
+				background-color: #44AFF9;
+				margin: auto;
+				font-size: 14px;
+				font-weight: 600;
+				padding-top: 20px;
+				padding-bottom: 20px;
+			}
+			
+			.info_to_show .student_head {
+				height: 140px;
+				width: 105px;
+				margin: auto;
+				text-align: right;
+			}
+			
+			.info_to_show img {
+				border-radius:50% ;
+				height: 140px;
+				width: 105px;	
+				margin: auto;
+			}
+			
+			.info_to_show .push_right {
+				text-align: right;
+			}
+			
+			.info_to_show table{
+				border-collapse:collapse;
+				line-height: 1;
+			}
+			
+			.filter {
+				font-size: 14px;
+				margin-top: 20px;
+				margin-bottom: 20px;
+			}
+			
+			.filter input[type="button"] {
+				border-radius: 6px;
+				border: 1px solid #44AFF9;
+				padding-left: 10px;
+				padding-right: 10px;
+				background-color: #a0a;
+				color: #fff;
+			}
+			
+			.result {
+				margin-bottom: 40px;
+			}
+			
+			.result .result_head {
+				background-color: #44AFF9;
+				padding: 20px;
+				color: #fff;
+				font-weight: 600;
+				letter-spacing: 3px;
+			}
+			
+			.result .show_amount {
+				background-color: #F2F2F2;
+				padding: 30px;
+			}
+			
+			#result_lists{
+				width: 100%;
+				padding: 0 !important;
+			}
+			
+			iframe {
+				margin: 0;
+				width: 100%;
+				overflow: hidden;
+				border: 0 solid #fff;
+				border-right:1px solid #eee ;
+				}
+				
+			.pagecontent {
+				padding: 0;
+				margin-bottom: -6px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row  header">
+				<div class="col-3 logo_area">
+					<img src="img/河海logo（深）.png" class="header_logo"/>
+				</div>
+				<h2>党员信息管理系统</h2>
+			</div>
+			<div class="row">
+				<div class="col-3 navs">
+					<li id="my"><a href="#"><i class="fab fa-font-awesome-flag"></i>我的支部</a></li>
+					<li id="administration"><a href="#"><i class="fas fa-users-cog" id="too_wide"></i>学生管理<div class="show"><i class="fas fa-angle-down"></i></div></a></li>
+					<ul class="folded">
+						<li id="filter"><a href="#">筛选学生信息</a></li>
+						<li id="add"><a href="#">添加学生</a></li>
+					</ul>
+					<li id="update"><a href="#"><i class="fas fa-book"></i>更新学生成绩</a></li>
+					<li id="table"><a href="#"><i class="fas fa-table"></i>报表生成</a></li>
+					<li id="review"><a href="#"><i class="fab fa-stack-overflow"></i> 材料审核</a></li>
+					<li id="transfer"><a href="#"><i class="fas fa-exchange-alt"></i>关系转接</a></li>
+					<li id="management"><a href="#"><i class="far fa-hand-paper"></i>事务管理</a></li>
+					<li id="massage"><a href="#"><i class="fas fa-envelope"></i></i>消息管理</a></li>
+				</div>
+				
+				<div class="col-9 pagecontent">
+					<iframe id="outer" src="resume.html" scrolling="no" onload="iframe_resize()"></iframe>
+				</div>
+			</div>
+			<div class="row" id="footer">
+				<div class="col-3">
+					<img src="img/project.png"/>
+				</div>
+				<div class="col-5">
+					<a href="#">河海官网</a> &nbsp;|&nbsp; 
+					<a href="#">计信院官网</a> &nbsp;|&nbsp; 
+					<a href="#">联系我们</a>
+					<br />
+					<span>主管部门：计算机与信息学院党支部</span>
+					<br />
+					<span>Copyright &copy; 2017.河海大学HohaiUniversity-版权所有</span>
+				</div>
+				<div class="col-4">
+					<span>河海大学党委 &nbsp; &nbsp;计信院党委微信平台 <br />计信院2018创训小组 </span>
+				</div>
+			</div>
+		</div>
+		
+		<script src="js/jquery-3.3.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	
+	<script type="text/javascript">
+		
+		//使iframe大小随内容改变
+		function iframe_resize(){
+			var winH = document.getElementById("outer").contentWindow.document.body.offsetHeight;
+			var winW = document.getElementById("outer").contentWindow.document.body.offsetWidthght;
+			$("#outer").css({'height':winH,'width':winW});
+		};
+		
+		//导航栏被选择后颜色固定，先前被选择的颜色变回
+		$(".navs").find("li").click(function(){
+			$(this).parents().find("li").css("color","#444")
+			$(this).parents().find("li").css("border-left","0 solid #eee")
+			$(this).css("color","#44AFF9")
+			$(this).css("border-left","2px solid #44aff9")
+		})
+
+		
+		//隐藏或者显示折叠的菜单
+		$("#administration").click(function(){
+			$(".folded").toggle(
+				function(){$(".folded").attr('hidden','hidden')},
+				function(){$(".folded").removeAttr('hidden')},
+			)
+		});
+		
+		//页面内的切换跳转
+		$("#my").click(function(){$("#outer").attr("src","my.html")})
+		$("#filter").click(function(){$("#outer").attr("src","filter.html")})
+		$("#add").click(function(){$("#outer").attr("src","add.html")})
+		$("#update").click(function(){$("#outer").attr("src","update_grade.html")})
+		$("#table").click(function(){})
+		$("#review").click(function(){$("#outer").attr("src","material_review.html")})
+		$("#transfer").click(function(){$("#outer").attr("src","transfer.html")})
+		$("#management").click(function(){})
+		$("#massage").click(function(){})
+	</script>
+	</body>
+</html>

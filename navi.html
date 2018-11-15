@@ -1,0 +1,41 @@
+
+<head>
+	<meta charset="UTF-8"><title></title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="font/fontawesome-free-5.2.0-web/css/all.css"/>
+		<link rel="stylesheet" type="text/css" href="css/navi.css"/>
+</head>
+	<div class="col-12 navs">
+		<li id="my"><a href="#"><i class="fab fa-font-awesome-flag"></i>我的支部</a></li>
+		<li id="administration"><a href="#"><i class="fas fa-users-cog" id="too_wide"></i>学生管理<div class="show"><i class="fas fa-angle-down"></i></div></a></li>
+		<ul class="folded">
+			<li id="filter"><a href="#">筛选学生信息</a></li>
+			<li id="add"><a href="#">添加学生</a></li>
+		</ul>
+		<li id="update"><a href="#"><i class="fas fa-book"></i>更新学生成绩</a></li>
+		<li id="table"><a href="#"><i class="fas fa-table"></i>报表生成</a></li>
+		<li id="review"><a href="#"><i class="fab fa-stack-overflow"></i> 材料审核</a></li>
+		<li id="transfer"><a href="#"><i class="fas fa-exchange-alt"></i>关系转接</a></li>
+		<li id="management"><a href="#"><i class="far fa-hand-paper"></i>事务管理</a></li>
+		<li id="massage"><a href="#"><i class="fas fa-envelope"></i></i>消息管理</a></li>
+	</div>
+	
+	<script src="js/jquery-3.3.1.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		//导航栏被选择后颜色固定，先前被选择的颜色变回
+		$(".navs").find("li").click(function(){
+			$(this).parents().find("li").css("color","#444")
+			$(this).parents().find("li").css("border-left","0 solid #eee")
+			$(this).css("color","#44AFF9")
+			$(this).css("border-left","2px solid #44aff9")
+		})
+
+		//隐藏或者显示折叠的菜单
+		$("#administration").click(function(){
+			$(".folded").toggle(
+				function(){$(".folded").attr('hidden','hidden')},
+				function(){$(".folded").removeAttr('hidden')},
+			)
+		});
+	</script>

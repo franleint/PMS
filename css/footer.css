@@ -1,0 +1,16 @@
+	#footer {
+		background-color: #405045;
+		padding: 40px;
+		color: #FFF;
+		line-height: 200%;
+		margin: 0;
+	}
+	
+	#footer img {
+		margin-left: 40px;
+	}
+	
+	#footer a{
+		color: #fff;
+		text-decoration: none;
+	}
